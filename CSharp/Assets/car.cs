@@ -11,6 +11,7 @@
 public class car : MonoBehaviour
 {
     //認識第一個成員：欄位field-儲存物件資料
+    //欄位    值          型態
     //cc數    -2000       - 整數int
     //重量    -100.9      -浮點數 float(有小數點，其後要加f)
     //品牌    -bmw        -字串string
