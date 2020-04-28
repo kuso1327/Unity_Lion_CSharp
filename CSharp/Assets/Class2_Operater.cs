@@ -85,8 +85,7 @@ public class Class2_Operater : MonoBehaviour
         print("鑰匙數量:" + ++key);
 
         //指派運算子：+= -= *= /= %=
-        //運算都是連著的
-
+        
         //hp=hp+20;
         hp += 20;
         print("血量" + hp); //120
@@ -103,6 +102,14 @@ public class Class2_Operater : MonoBehaviour
         hp %= 20;
         print("血量" + hp);//0
 
+        //運算都是連著的，若不想要連著，需重新定義值
+        print( a = a + 1); //11
+        print( a = a + 2); //13
+        
+        a = 10;
+        print(a = a + 1); //11
+        a = 10;
+        print(a = a + 2); //12
     }
 
 }
