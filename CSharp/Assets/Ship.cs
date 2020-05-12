@@ -45,6 +45,8 @@ public class Ship : MonoBehaviour
     private float _atk;
     public float atk { get { return _atk; }set { _atk = value*lv; } }
 
-
+    //快速完成黏巴達寫法48行與52行相同
+    private float _def;
+    public float def { get => _def; set => _def = value*lv; }
 
 }
