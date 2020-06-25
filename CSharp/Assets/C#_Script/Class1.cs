@@ -11,10 +11,10 @@ public class Class1 : MonoBehaviour
     //1.大小寫不一樣
     //2.括號成對出現() [] {} ' ' " " < >
     [Header("汽車1號")]
-    public car car1;
+    public Class1_car car1;
 
     [Header("汽車2號")]
-    public car car2;
+    public Class1_car car2;
  
     //事件：在特定時間會已指定次數執行的方法(名稱為藍色 大小寫不同，要為大寫S)
     //開始事件：播放遊戲時執行一次-初始設定
