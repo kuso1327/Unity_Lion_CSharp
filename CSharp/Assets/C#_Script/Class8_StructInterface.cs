@@ -6,10 +6,10 @@ public class Class8_StructInterface : MonoBehaviour
     public Vector3 pos;
 
     //使用結構
-    public Direction myDire1;
+    public Class8_Direction myDire1;
 
     //new 新增物件，並且可以使用建構子
-    public Direction myDire2 = new Direction(4);
+    public Class8_Direction myDire2 = new Class8_Direction(4);
     private void Start()
     {
 
@@ -24,7 +24,7 @@ public class Class8_StructInterface : MonoBehaviour
         myDire1.direction = 1;
 
         //常數與靜態取得用法是一樣的 名稱.成員
-        print("方向右邊的值：" +Direction.right);
+        print("方向右邊的值：" + Class8_Direction.right);
 
         //Direction.left = 5;(錯誤：不能變更常數)
 
@@ -36,18 +36,18 @@ public class Class8_StructInterface : MonoBehaviour
     }
 
     //類別一定要使用 new 新增物件
-    public Class_Data c_data1=new Class_Data();
+    public Class8_Class_Data c_data1 =new Class8_Class_Data();
     //結構可用可不用
-    public Struct_Data s_data1;
+    public Class8_Struct_Data s_data1;
 
 
     //類別：參考型別 - 傳址
-    public Class_Data c2 = new Class_Data("50", 99999, 100);
-    public Class_Data c3 = new Class_Data("亮亮", 999999, 50);
+    public Class8_Class_Data c2 = new Class8_Class_Data("50", 99999, 100);
+    public Class8_Class_Data c3 = new Class8_Class_Data("亮亮", 999999, 50);
 
     //結構:實質型別 - 傳值
-    public Struct_Data s2 = new Struct_Data("50", 99999, 100);
-    public Struct_Data s3 = new Struct_Data("亮亮", 999999, 50);
+    public Class8_Struct_Data s2 = new Class8_Struct_Data("50", 99999, 100);
+    public Class8_Struct_Data s3 = new Class8_Struct_Data("亮亮", 999999, 50);
 
     private void Awake()
     {
