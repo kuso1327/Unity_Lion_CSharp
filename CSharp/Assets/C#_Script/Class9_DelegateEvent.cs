@@ -2,13 +2,13 @@
 
 public class Class9_DelegateEvent : MonoBehaviour
 {
+    public int number1 = 1;
+   
     public void AddTen(int number)
     {
         int n = number += 10;
         print("數字累加10：" + n);
     }
-
-    public int number1 = 1;
 
     private void Awake()
     {
@@ -37,6 +37,8 @@ public class Class9_DelegateEvent : MonoBehaviour
 
     //可以儲存 無傳回、一個字串參數 的任何方法
     public delegate void DelegateTest2(string s);
+    //委派簽名：無傳回、一個參數、整數
+    public delegate void DelegateTest3(int number);
 
     //定義委派欄位
     public DelegateTest dA;
@@ -47,6 +49,9 @@ public class Class9_DelegateEvent : MonoBehaviour
     public DelegateTest d2;
 
     public DelegateTest2 dC2;
+
+    public DelegateTest3 d3;
+
     private void Start()
     {
         dA = MethodA;           //dA 欄位儲存 方法A
@@ -60,10 +65,23 @@ public class Class9_DelegateEvent : MonoBehaviour
         dC2 = MethodC;          //儲存 方法C    
         dC2("我是委派~");
 
-        d = MethodA;            
+        d = MethodA;
         d += MethodB;
         d += MethodB;
+
+        //Lambda 匿名函式
+        //( ) + > { 陳述式 }
+        d += () =>
+        {
+            print("我是匿名函式~");
+            print("我是匿名函式~");
+        };
+        
         d();
+
+        d3 = (n) => { n *= 10; print("十倍後的數值：" + n); };
+        d3(7);
+
 
   
     }
